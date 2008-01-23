@@ -1,0 +1,31 @@
+.PHONY: makelib install clean
+
+FILES[] =
+   base64
+
+LIB = base64
+
+.DEFAULT: $(OCamlLibrary $(LIB), $(FILES))
+
+open ../../config
+
+IFILES[] =
+   base64
+
+ALIBS[] =
+
+LibInstall(makelib, $(LIB), $(IFILES), $(ALIBS))
+
+section
+   OCAML_LIBS = base64
+   .DEFAULT: $(OCamlProgram base64_encode, cmd_base64_encode)
+
+section
+   OCAML_LIBS = base64
+   .DEFAULT: $(OCamlProgram base64_decode, cmd_base64_decode)
+
+install: makelib
+
+clean:
+   $(CLEAN)
+  
