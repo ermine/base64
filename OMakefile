@@ -27,5 +27,5 @@ section
 install: makelib
 
 clean:
-   $(CLEAN)
+   $(CLEAN) base64_decode$(EXE) base64_encode$(EXE)
   
