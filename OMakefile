@@ -7,8 +7,6 @@ LIB = base64
 
 .DEFAULT: $(OCamlLibrary $(LIB), $(FILES))
 
-open ../../config
-
 IFILES[] =
    base64
 
