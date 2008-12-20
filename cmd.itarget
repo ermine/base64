@@ -1,0 +1,5 @@
+cmd_base64_encode.native
+cmd_base64_encode.byte
+cmd_base64_decode.native
+cmd_base64_decode.byte
+
